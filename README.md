@@ -3,3 +3,7 @@
 # Run Python programs
 
 In shell, `python3 <filename>`
+
+# Exit Python interpreter
+
+`exit()`
