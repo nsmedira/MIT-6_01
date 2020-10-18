@@ -2,3 +2,10 @@
 # value raised to the fourth power. It should have type num -> num. You should use the
 # square procedure (you don't need to redefine it in this box; it will use our definition
 # when your code is run by the tutor).
+
+from square import square
+
+def fourthPower(x):
+    return square(square(x))
+
+print(fourthPower("two"))
