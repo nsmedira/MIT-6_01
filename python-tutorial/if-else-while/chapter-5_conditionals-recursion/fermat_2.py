@@ -51,4 +51,4 @@ def to_integer(str):
         print("Your input can't be converted to an integer. Try again. Enter 'q' to quit.")
         return 'error'
 
-collect_check()
+# collect_check()
