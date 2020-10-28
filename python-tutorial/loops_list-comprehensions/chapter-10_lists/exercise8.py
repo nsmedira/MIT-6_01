@@ -14,6 +14,7 @@
 # Or you could read the documentation of the bisect module and use that!
 
 import math
+import time
 from custom_bisect import bisect
 
 fin = open('words_lower.txt')
@@ -22,6 +23,14 @@ for word in fin:
     word_list = word_list + [word.strip('\n')]
 
 # print(len(word_list))
+def lookup(value, t):
+    start = time.time()
+    is_in_list = value in t
+    elapsed = time.time() - start
+    print('list searched in ', str(elapsed), 'seconds')
+    print("'" + value + "' is in list: " + str(is_in_list))
+
+lookup('zookeepers', word_list)
 
 # word_list[0]
 print(bisect(word_list, 'aardvark')) 
