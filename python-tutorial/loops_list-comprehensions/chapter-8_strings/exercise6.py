@@ -1,3 +1,8 @@
+# Exercise 8.6
+# Think Python
+# Chapter 8 - Strings
+# Exercise 6
+
 from exercise4 import find
 
 def count(string, letter):

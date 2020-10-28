@@ -1,3 +1,8 @@
+# Exercise 8.11
+# Think Python
+# Chapter 8 - Strings
+# Exercise 11
+
 # The following functions are all intended to check whether a string contains any lowercase letters, but at least some of them are wrong. For each function, describe what the function actually does (assuming that the parameter is a string).
 
 # the function does not do what its name suggests because if the first letter in the string is not lowercase, it returns False

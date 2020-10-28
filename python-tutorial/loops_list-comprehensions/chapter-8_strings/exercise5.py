@@ -1,3 +1,8 @@
+# Exercise 8.5
+# Think Python
+# Chapter 8 - Strings
+# Exercise 5
+
 def count(string, letter):
     count = 0
     for char in string:
