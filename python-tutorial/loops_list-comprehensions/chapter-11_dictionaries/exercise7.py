@@ -180,4 +180,6 @@ if __name__ == "__main__":
     print(RSA('python')) # encrypts and decrypts message 'python'
     print(RSA('cat')) # encrypts and decrypts message 'cat'
     print(RSA('dog')) # encrypts and decrypts message 'dog'
+    print(RSA('a 1')) # (to rule out spaces as the culprit) encrypts and decrypts message 'a 1'
+    print(RSA('pythons')) # FAILS - 7 characters in string seems to be the limit
     print(RSA('hello world')) # FAILS - encoded string does not equal decoded string
