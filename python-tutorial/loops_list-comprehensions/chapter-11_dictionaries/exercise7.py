@@ -43,7 +43,7 @@ def isPrime(n) :
   
     return True
 
-# the max range for num of type int (larger will be of type long)
+# find two prime numbers whose product n will be greater than m
 i = math.ceil(math.sqrt(m))
 
 primes = []
