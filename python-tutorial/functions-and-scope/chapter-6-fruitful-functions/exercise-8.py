@@ -10,4 +10,5 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
-print(gcd(1000000,1001000))
+if __name__ == '__main__':
+    print(gcd(1000000,1001000))
