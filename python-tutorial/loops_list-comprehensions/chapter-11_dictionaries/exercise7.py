@@ -69,8 +69,10 @@ def generate_keys(m):
     # 3. Compute λ(n), where λ is Carmichael's totient function. Since n = pq, λ(n) = lcm(λ(p),λ(q)), and since p and q are prime, λ(p) = φ(p) = p − 1 and likewise λ(q) = q − 1. Hence λ(n) = lcm(p − 1, q − 1).
     # The lcm may be calculated through the Euclidean algorithm, since lcm(a,b) = |ab|/gcd(a,b).
     a, b = (p - 1), (q - 1)
-    lam = int(abs(a * b) / math.gcd(a, b))
-    # print('lam:', lam)
+
+    print('lam w/ float division: ', abs(a * b) / math.gcd(a, b))
+    lam = abs(a * b) // math.gcd(a, b)
+    print('lam:', lam)
 
     # 4. Choose an integer e such that 1 < e < λ(n) and gcd(e, λ(n)) = 1; that is, e and λ(n) are coprime.
 
