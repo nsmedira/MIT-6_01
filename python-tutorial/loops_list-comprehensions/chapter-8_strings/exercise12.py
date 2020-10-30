@@ -14,20 +14,32 @@
 def rotate_word(string, integer):
 
     string = string.lower()
-    
     new = ''
 
     lower_bound = ord('a')
     upper_bound = ord('z')
 
     for letter in string:
-        c = ord(letter) + integer
+        num = ord(letter)
+        mod = abs(integer) % 26 # take remainder of abs(integer) / 26 since there are only 26 lower case letters
+        if integer >= 0:
+            c = num + mod 
+        else:
+            c = num - mod
+        
         if c < lower_bound:
             c = upper_bound - (lower_bound - c) + 1
         elif c > upper_bound:
             c = lower_bound + (c - upper_bound) - 1
+
         new += chr(c)
 
     return new
 
-print(rotate_word('MElon', -10))
+if __name__ == "__main__":
+    print(rotate_word('MElon', -10))
+    print(rotate_word('test', 1))
+    print(rotate_word('test', 53))
+    print(rotate_word('test', -1))
+    print(rotate_word('test', 51))
+    print(rotate_word('test', 26))
