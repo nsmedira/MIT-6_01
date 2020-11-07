@@ -48,13 +48,13 @@ def reducible_children(word, d):
         # if the list of reducible children has at least one child
         if t:
 
-            # add the child to the result array
+            # add the child to the result list
             res += [child]
 
-    # if the result array as at least one word
+    # if the result list as at least one word
     if res:
 
-        # add the word as a key and the result array as a value to the memo dictionary
+        # add the word as a key and the result list as a value to the memo dictionary
         memo[word] = res
 
     return res
@@ -69,7 +69,7 @@ def children(word, d):
         # if the child is in the dictionary
         if child in d:
 
-            # add the child to the result array
+            # add the child to the result list
             res += [child]
 
     return res
@@ -88,9 +88,6 @@ def build_dictionary(path):
 
     return d
 
-memo = dict()
-memo[''] = ['']
-
 def find_reducibles(d):
 
     res = []
@@ -101,7 +98,7 @@ def find_reducibles(d):
         # get a list of reducible children
         t = reducible_children(word, d)
 
-        # if the list contains at least 1 reducible child, add the word to the result array
+        # if the list contains at least 1 reducible child, add the word to the result list
         if t:
             res += [word]
     
@@ -117,7 +114,7 @@ def longest_word(d):
     # for every reducible word
     for word in reducible_words:
 
-        # add a tuple (length of the word, the word) to array t
+        # add a tuple (length of the word, the word) to list t
         t += [(len(word), word)]
 
     # sort t descending
@@ -133,6 +130,9 @@ def print_trail(word):
     print_trail(t[0])
 
 if __name__ == "__main__":
+
+    memo = dict()
+    memo[''] = ['']
 
     # build the dictionary
     d = build_dictionary('../chapter-10_lists/words.txt')
