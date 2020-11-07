@@ -32,7 +32,7 @@
 
 def reducible_children(word, d):
 
-    # word is reducible if it's already in our list of reducible words
+    # word is reducible if it's already in our dictionary of reducible words
     if word in memo:
         m = memo[word]
         return m
