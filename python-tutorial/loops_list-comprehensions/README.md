@@ -34,3 +34,11 @@ which is obtained by successively letting `var` take values from `list`, and the
 >>> [x for x in nums if x%2==1]
 [1, 5, 99, 101, 37, 101]
 ```
+
+# slices of lists
+
+a slice of a list returns a list, even if one element
+
+# slicing where end index is negative
+
+goes from start index to end index, where end index is counted from the right side
