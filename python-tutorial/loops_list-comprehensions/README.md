@@ -42,3 +42,17 @@ a slice of a list returns a list, even if one element
 # slicing where end index is negative
 
 goes from start index to end index, where end index is counted from the right side
+
+# step argument in `range()` function
+
+`range(3, 10, 3)` returns a sequence starting at 3, going to 10 (excluding 10), including every third integer
+
+```
+> 3
+> 6
+> 9
+```
+
+## Reverse range
+
+If start is greater than stop, e.g. `range(10, 3)`, the step value must also be negative or the sequence will be empty
