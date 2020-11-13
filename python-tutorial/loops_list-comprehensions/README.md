@@ -56,3 +56,7 @@ goes from start index to end index, where end index is counted from the right si
 ## Reverse range
 
 If start is greater than stop, e.g. `range(10, 3)`, the step value must also be negative or the sequence will be empty
+
+# requiring argument types in function declaration
+
+[Python Type Checking (Guide) - Hello Types](https://realpython.com/python-type-checking/#hello-types)
